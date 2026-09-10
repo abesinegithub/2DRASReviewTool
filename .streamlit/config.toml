@@ -1,0 +1,8 @@
+[server]
+# Browser upload is intentionally kept at 2 GB. For MAAPnext-scale datasets use
+# Local Workspace / Local Archive mode so model data never travels through the browser.
+maxUploadSize = 2048
+maxMessageSize = 2048
+
+[browser]
+gatherUsageStats = false
