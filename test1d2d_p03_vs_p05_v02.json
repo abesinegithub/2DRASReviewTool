@@ -1,0 +1,1124 @@
+{
+  "review_pair": {
+    "existing": {
+      "plan_code": "p03",
+      "plan_title": "full 1d/2d 100yr",
+      "program_version": "5.04",
+      "geometry_file": "g02",
+      "flow_file": "u01",
+      "simulation_date": "01JUN2007,0000,02JUN2007,0000",
+      "computation_interval": "10SEC",
+      "output_interval": "15MIN",
+      "mapping_interval": "1HOUR"
+    },
+    "revised": {
+      "plan_code": "p05",
+      "plan_title": "1d/2d 100yr proposed",
+      "program_version": "5.04",
+      "geometry_file": "g03",
+      "flow_file": "u04",
+      "simulation_date": "01JUN2007,0000,02JUN2007,0000",
+      "computation_interval": "10SEC",
+      "output_interval": "15MIN",
+      "mapping_interval": "1HOUR"
+    }
+  },
+  "project": {
+    "project_title": "D118-00-00",
+    "current_plan": "p05",
+    "units": "US Customary",
+    "geometry_files": [
+      "g02",
+      "g01",
+      "g03",
+      "g04"
+    ],
+    "unsteady_files": [
+      "u01",
+      "u02",
+      "u03",
+      "u04"
+    ],
+    "plan_files": [
+      "p03",
+      "p01",
+      "p04",
+      "p05",
+      "p02"
+    ],
+    "dss_file": "dss",
+    "archive_member": "Test1D2D/d1180000.prj",
+    "sha256": "5e1e4d6092476fbdc52094a26e470947498d9f75a8e6615b30b4fc25d8f1940d"
+  },
+  "plan_setting_changes": [],
+  "hdf_metadata": {
+    "existing": {
+      "file_version": "HEC-RAS 5.0.4 Beta 2 March 6, 2018",
+      "units": "US Customary",
+      "projection_wkt": "PROJCS[\"NAD_1983_StatePlane_Texas_South_Central_FIPS_4204_Feet\",GEOGCS[\"GCS_North_American_1983\",DATUM[\"D_North_American_1983\",SPHEROID[\"GRS_1980\",6378137.000,298.25722210]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]],PROJECTION[\"Lambert_Conformal_Conic\"],PARAMETER[\"False_Easting\",1968500.000],PARAMETER[\"False_Northing\",13123333.333],PARAMETER[\"Central_Meridian\",-99.00000000000000],PARAMETER[\"Latitude_Of_Origin\",27.83333333333333],PARAMETER[\"Standard_Parallel_1\",30.28333333333333],PARAMETER[\"Standard_Parallel_2\",28.38333333333333],UNIT[\"Foot_US\",0.30480060960122]]\r\n"
+    },
+    "revised": {
+      "file_version": "HEC-RAS 5.0.4 Beta 2 March 6, 2018",
+      "units": "US Customary",
+      "projection_wkt": "PROJCS[\"NAD_1983_StatePlane_Texas_South_Central_FIPS_4204_Feet\",GEOGCS[\"GCS_North_American_1983\",DATUM[\"D_North_American_1983\",SPHEROID[\"GRS_1980\",6378137.000,298.25722210]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]],PROJECTION[\"Lambert_Conformal_Conic\"],PARAMETER[\"False_Easting\",1968500.000],PARAMETER[\"False_Northing\",13123333.333],PARAMETER[\"Central_Meridian\",-99.00000000000000],PARAMETER[\"Latitude_Of_Origin\",27.83333333333333],PARAMETER[\"Standard_Parallel_1\",30.28333333333333],PARAMETER[\"Standard_Parallel_2\",28.38333333333333],UNIT[\"Foot_US\",0.30480060960122]]\r\n"
+    }
+  },
+  "mesh_comparison": {
+    "north2d": {
+      "status": "same_mesh",
+      "existing_cell_count": 19738,
+      "revised_cell_count": 19738,
+      "cell_count_change": 0,
+      "common_cell_centers": 19738,
+      "existing_only_centers": 0,
+      "revised_only_centers": 0,
+      "same_cell_center_order": true
+    },
+    "south2D": {
+      "status": "changed_mesh",
+      "existing_cell_count": 22824,
+      "revised_cell_count": 23632,
+      "cell_count_change": 808,
+      "common_cell_centers": 22685,
+      "existing_only_centers": 139,
+      "revised_only_centers": 947,
+      "same_cell_center_order": false
+    }
+  },
+  "cross_section_comparison": {
+    "existing_count": 169,
+    "revised_count": 169,
+    "common_count": 169,
+    "added": [],
+    "removed": []
+  },
+  "structure_comparison": {
+    "structure_count": {
+      "existing": 38,
+      "revised": 38
+    },
+    "culvert_group_count": {
+      "existing": 6,
+      "revised": 7
+    },
+    "added_culvert_groups": [
+      {
+        "Type": "Lateral",
+        "River": "D118-00-00",
+        "Reach": "D118-00-00_0002",
+        "RS": "15591",
+        "Connection": "",
+        "Struct ID": 28,
+        "Name": "Culvert #1",
+        "Shape": 1,
+        "Shape Name": "Circular",
+        "Chart": 1,
+        "Chart Desc": "Concrete Pipe Culvert",
+        "Scale": 1,
+        "Scale Desc": "Square edge entrance with headwall",
+        "Rise": 3.0,
+        "Span": 3.0,
+        "Length": 240.0,
+        "US Distance": null,
+        "Top Mann": 0.013000000268220901,
+        "Bot Mann": 0.013000000268220901,
+        "Depth Bot Mann": 0.0,
+        "Depth Blck": 0.0,
+        "Entr Loss": 0.5,
+        "Exit Loss": 1.0,
+        "Barrels": 1
+      }
+    ],
+    "removed_culvert_groups": [],
+    "modified_culvert_groups": []
+  },
+  "boundary_condition_lines": {
+    "existing": [],
+    "revised": [
+      {
+        "Name": "prop",
+        "SA-2D": "south2D",
+        "Type": "Internal",
+        "Length": 71.88887786865234
+      }
+    ]
+  },
+  "unsteady_boundary_comparison": {
+    "existing_count": 15,
+    "revised_count": 15,
+    "added_locations": [
+      {
+        "location_raw": "                ,                ,        ,        ,                ,south2D         ,                ,prop                            ",
+        "river": "",
+        "reach": "",
+        "river_station": "",
+        "storage_area": "",
+        "two_d_area": "south2D",
+        "connection": "",
+        "bc_line": "prop",
+        "parameters": {
+          "Interval": "1HOUR",
+          "Flow Hydrograph": "0",
+          "Stage Hydrograph TW Check": "0",
+          "Flow Hydrograph QMult": "0.35",
+          "Flow Hydrograph Slope": "0.0001",
+          "DSS File": "..\\D118_HMS34\\D118_TSARP.dss",
+          "DSS Path": "//D118d/FLOW/01MAY2007/15MIN/RUN:1% RUN/",
+          "Use DSS": "True",
+          "Use Fixed Start Time": "False",
+          "Fixed Start Date/Time": ",",
+          "Is Critical Boundary": "False",
+          "Critical Boundary Flow": ""
+        }
+      }
+    ],
+    "removed_locations": [
+      {
+        "location_raw": "D118-00-00      ,D118-00-00_0002 ,11829   ,        ,                ,                ,                ,                                ",
+        "river": "D118-00-00",
+        "reach": "D118-00-00_0002",
+        "river_station": "11829",
+        "storage_area": "",
+        "two_d_area": "",
+        "connection": "",
+        "bc_line": "",
+        "parameters": {
+          "Interval": "1HOUR",
+          "Lateral Inflow Hydrograph": "0",
+          "Flow Hydrograph QMult": "0.2",
+          "DSS File": "..\\D118_HMS34\\D118_TSARP.dss",
+          "DSS Path": "//D118d/FLOW/01MAY2007/15MIN/RUN:1% RUN/",
+          "Use DSS": "True",
+          "Use Fixed Start Time": "False",
+          "Fixed Start Date/Time": ",",
+          "Is Critical Boundary": "False",
+          "Critical Boundary Flow": ""
+        }
+      }
+    ],
+    "common_location_parameter_changes": []
+  },
+  "breaklines": {
+    "existing_count": 0,
+    "revised_count": 2
+  },
+  "available_results": {
+    "existing": {
+      "two_d_areas": {
+        "north2d": {
+          "summary_datasets": [
+            "Cumulative Cell Iter",
+            "Maximum Face Shear Stress",
+            "Maximum Face Velocity",
+            "Maximum Water Surface",
+            "Minimum Face Velocity",
+            "Minimum Water Surface"
+          ],
+          "time_series_datasets": [
+            "Depth",
+            "Face Shear Stress",
+            "Face Velocity",
+            "Time Step",
+            "Water Surface"
+          ]
+        },
+        "south2D": {
+          "summary_datasets": [
+            "Cumulative Cell Iter",
+            "Maximum Face Shear Stress",
+            "Maximum Face Velocity",
+            "Maximum Water Surface",
+            "Minimum Face Velocity",
+            "Minimum Water Surface"
+          ],
+          "time_series_datasets": [
+            "Depth",
+            "Face Shear Stress",
+            "Face Velocity",
+            "Time Step",
+            "Water Surface"
+          ]
+        }
+      },
+      "cross_sections": [
+        "Maximum Channel Velocity",
+        "Maximum Flow",
+        "Maximum Velocity Flow Distribution",
+        "Maximum Water Surface",
+        "Minimum Channel Velocity",
+        "Minimum Flow",
+        "Minimum Velocity Flow Distribution",
+        "Minimum Water Surface"
+      ]
+    },
+    "revised": {
+      "two_d_areas": {
+        "north2d": {
+          "summary_datasets": [
+            "Cumulative Cell Iter",
+            "Maximum Face Shear Stress",
+            "Maximum Face Velocity",
+            "Maximum Water Surface",
+            "Minimum Face Velocity",
+            "Minimum Water Surface"
+          ],
+          "time_series_datasets": [
+            "Depth",
+            "Face Shear Stress",
+            "Face Velocity",
+            "Time Step",
+            "Water Surface"
+          ]
+        },
+        "south2D": {
+          "summary_datasets": [
+            "Cumulative Cell Iter",
+            "Maximum Face Shear Stress",
+            "Maximum Face Velocity",
+            "Maximum Water Surface",
+            "Minimum Face Velocity",
+            "Minimum Water Surface"
+          ],
+          "time_series_datasets": [
+            "Depth",
+            "Face Shear Stress",
+            "Face Velocity",
+            "Time Step",
+            "Water Surface"
+          ]
+        }
+      },
+      "cross_sections": [
+        "Maximum Channel Velocity",
+        "Maximum Flow",
+        "Maximum Velocity Flow Distribution",
+        "Maximum Water Surface",
+        "Minimum Channel Velocity",
+        "Minimum Flow",
+        "Minimum Velocity Flow Distribution",
+        "Minimum Water Surface"
+      ]
+    }
+  },
+  "hydraulic_comparison": {
+    "two_d": {
+      "north2d": {
+        "comparison_method": "direct_same_order_cell",
+        "raw_max_wse_delta": {
+          "common_count": 19738,
+          "finite_count": 19738,
+          "min_delta_ft": -5.4976348876953125,
+          "max_delta_ft": 0.01446533203125,
+          "mean_delta_ft": -0.05338342705086041,
+          "median_delta_ft": 0.0,
+          "count_abs_gt_0_001_ft": 3873,
+          "count_abs_gt_0_01_ft": 2949,
+          "count_abs_gt_0_1_ft": 1956,
+          "count_abs_gt_0_5_ft": 966
+        },
+        "max_wse_delta_both_wet": {
+          "wet_depth_threshold_ft": 0.01,
+          "both_wet_count": 6758,
+          "became_dry_count": 307,
+          "became_wet_count": 0,
+          "both_dry_count": 12673,
+          "finite_count": 6758,
+          "min_delta_ft": -5.4976348876953125,
+          "max_delta_ft": 0.01446533203125,
+          "mean_delta_ft": -0.13355333419126955,
+          "median_delta_ft": -0.0013580322265625,
+          "count_abs_gt_0_001_ft": 3553,
+          "count_abs_gt_0_01_ft": 2644,
+          "count_abs_gt_0_1_ft": 1679,
+          "count_abs_gt_0_5_ft": 847
+        },
+        "wet_dry_transitions": {
+          "wet_depth_threshold_ft": 0.01,
+          "both_wet_count": 6758,
+          "became_dry_count": 307,
+          "became_wet_count": 0,
+          "both_dry_count": 12673
+        },
+        "max_wse_top_changes_both_wet": {
+          "largest_increases": [
+            {
+              "x": 3053347.34835063,
+              "y": 13803354.3793409,
+              "delta_ft": 0.01446533203125
+            },
+            {
+              "x": 3053347.34835063,
+              "y": 13803454.3793409,
+              "delta_ft": 0.0058135986328125
+            },
+            {
+              "x": 3053347.34835063,
+              "y": 13803554.3793409,
+              "delta_ft": 0.0054779052734375
+            },
+            {
+              "x": 3053447.34835063,
+              "y": 13803454.3793409,
+              "delta_ft": 0.00527191162109375
+            },
+            {
+              "x": 3053447.34835063,
+              "y": 13803554.3793409,
+              "delta_ft": 0.0047607421875
+            },
+            {
+              "x": 3024778.5067760837,
+              "y": 13810341.892320527,
+              "delta_ft": 0.00417327880859375
+            },
+            {
+              "x": 3024547.34835063,
+              "y": 13810354.3793409,
+              "delta_ft": 0.00399017333984375
+            },
+            {
+              "x": 3053270.533735303,
+              "y": 13803266.388138846,
+              "delta_ft": 0.00389862060546875
+            },
+            {
+              "x": 3053247.34835063,
+              "y": 13803354.3793409,
+              "delta_ft": 0.00389862060546875
+            },
+            {
+              "x": 3053247.34835063,
+              "y": 13803454.3793409,
+              "delta_ft": 0.00365447998046875
+            }
+          ],
+          "largest_decreases": [
+            {
+              "x": 3061747.34835063,
+              "y": 13804554.3793409,
+              "delta_ft": -5.4976348876953125
+            },
+            {
+              "x": 3061747.34835063,
+              "y": 13804654.3793409,
+              "delta_ft": -5.411624908447266
+            },
+            {
+              "x": 3061747.34835063,
+              "y": 13804754.3793409,
+              "delta_ft": -5.4111175537109375
+            },
+            {
+              "x": 3061647.34835063,
+              "y": 13804754.3793409,
+              "delta_ft": -5.409824371337891
+            },
+            {
+              "x": 3061647.34835063,
+              "y": 13804654.3793409,
+              "delta_ft": -5.409538269042969
+            },
+            {
+              "x": 3061547.34835063,
+              "y": 13804654.3793409,
+              "delta_ft": -5.409111022949219
+            },
+            {
+              "x": 3061447.34835063,
+              "y": 13804654.3793409,
+              "delta_ft": -5.409091949462891
+            },
+            {
+              "x": 3061647.34835063,
+              "y": 13804554.3793409,
+              "delta_ft": -5.409065246582031
+            },
+            {
+              "x": 3061547.34835063,
+              "y": 13804754.3793409,
+              "delta_ft": -5.408885955810547
+            },
+            {
+              "x": 3061447.34835063,
+              "y": 13804554.3793409,
+              "delta_ft": -5.408794403076172
+            }
+          ]
+        },
+        "max_depth_delta": {
+          "common_count": 19738,
+          "finite_count": 19738,
+          "min_delta_ft": -5.497630596160889,
+          "max_delta_ft": 0.0047855377197265625,
+          "mean_delta_ft": -0.05480128871303972,
+          "median_delta_ft": 0.0,
+          "count_abs_gt_0_001_ft": 3877,
+          "count_abs_gt_0_01_ft": 2998,
+          "count_abs_gt_0_1_ft": 1996,
+          "count_abs_gt_0_5_ft": 982
+        },
+        "max_face_velocity_delta": {
+          "common_face_count": 38014,
+          "finite_count": 38014,
+          "min_delta_ft_per_s": -0.8200084269046783,
+          "max_delta_ft_per_s": 1.1709854006767273,
+          "mean_delta_ft_per_s": 1.0377670828276021e-05,
+          "median_delta_ft_per_s": 0.0,
+          "count_abs_gt_0_001_ft_per_s": 3722,
+          "count_abs_gt_0_01_ft_per_s": 2395,
+          "count_abs_gt_0_1_ft_per_s": 365,
+          "count_abs_gt_0_5_ft_per_s": 13
+        },
+        "same_time_wse_both_wet": {
+          "timestamps_identical": true,
+          "compatible": true,
+          "common_count": 19738,
+          "summary_peak_absolute": {
+            "finite_count": 6758,
+            "min_delta_ft": -5.4976348876953125,
+            "max_delta_ft": 0.6160507202148438,
+            "mean_delta_ft": -0.1894229590875152,
+            "median_delta_ft": -0.00153350830078125,
+            "count_abs_gt_0_001_ft": 4435,
+            "count_abs_gt_0_01_ft": 2766,
+            "count_abs_gt_0_1_ft": 1736,
+            "count_abs_gt_0_5_ft": 1116
+          },
+          "summary_max_increase": {
+            "finite_count": 6758,
+            "min_delta_ft": -5.4976348876953125,
+            "max_delta_ft": 0.6160507202148438,
+            "mean_delta_ft": -0.05339820006077866,
+            "median_delta_ft": 0.00025177001953125,
+            "count_abs_gt_0_001_ft": 3873,
+            "count_abs_gt_0_01_ft": 2144,
+            "count_abs_gt_0_1_ft": 1117,
+            "count_abs_gt_0_5_ft": 331
+          },
+          "summary_max_decrease": {
+            "finite_count": 6758,
+            "min_delta_ft": -5.4976348876953125,
+            "max_delta_ft": 0.00186920166015625,
+            "mean_delta_ft": -0.19140557884358556,
+            "median_delta_ft": -0.002338409423828125,
+            "count_abs_gt_0_001_ft": 4128,
+            "count_abs_gt_0_01_ft": 2722,
+            "count_abs_gt_0_1_ft": 1735,
+            "count_abs_gt_0_5_ft": 1115
+          },
+          "wet_depth_threshold_ft": 0.01,
+          "cells_ever_became_dry": 756,
+          "cells_ever_became_wet": 35,
+          "cells_with_any_both_wet_timestamp": 6758
+        },
+        "top_same_time_wse_events": [
+          {
+            "x": 3061747.34835063,
+            "y": 13804554.3793409,
+            "delta_ft": -5.4976348876953125,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          },
+          {
+            "x": 3061747.34835063,
+            "y": 13804654.3793409,
+            "delta_ft": -5.411624908447266,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          },
+          {
+            "x": 3061747.34835063,
+            "y": 13804754.3793409,
+            "delta_ft": -5.4111175537109375,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          },
+          {
+            "x": 3061647.34835063,
+            "y": 13804754.3793409,
+            "delta_ft": -5.409824371337891,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          },
+          {
+            "x": 3061647.34835063,
+            "y": 13804654.3793409,
+            "delta_ft": -5.409538269042969,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          },
+          {
+            "x": 3061547.34835063,
+            "y": 13804654.3793409,
+            "delta_ft": -5.409111022949219,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          },
+          {
+            "x": 3061447.34835063,
+            "y": 13804654.3793409,
+            "delta_ft": -5.409091949462891,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          },
+          {
+            "x": 3061647.34835063,
+            "y": 13804554.3793409,
+            "delta_ft": -5.409065246582031,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          },
+          {
+            "x": 3061547.34835063,
+            "y": 13804754.3793409,
+            "delta_ft": -5.408885955810547,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          },
+          {
+            "x": 3061447.34835063,
+            "y": 13804554.3793409,
+            "delta_ft": -5.408794403076172,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          }
+        ]
+      },
+      "south2D": {
+        "comparison_method": "exact_common_cell_center_only",
+        "raw_max_wse_delta": {
+          "common_count": 22685,
+          "finite_count": 22685,
+          "min_delta_ft": -6.179588317871094,
+          "max_delta_ft": 3.6958770751953125,
+          "mean_delta_ft": -0.032017238617784154,
+          "median_delta_ft": 0.0,
+          "count_abs_gt_0_001_ft": 3895,
+          "count_abs_gt_0_01_ft": 2936,
+          "count_abs_gt_0_1_ft": 1830,
+          "count_abs_gt_0_5_ft": 692
+        },
+        "max_wse_delta_both_wet": {
+          "wet_depth_threshold_ft": 0.01,
+          "both_wet_count": 5752,
+          "became_dry_count": 443,
+          "became_wet_count": 3,
+          "both_dry_count": 16487,
+          "finite_count": 5752,
+          "min_delta_ft": -5.965663909912109,
+          "max_delta_ft": 0.3780670166015625,
+          "mean_delta_ft": -0.121376182837347,
+          "median_delta_ft": -0.00281524658203125,
+          "count_abs_gt_0_001_ft": 3434,
+          "count_abs_gt_0_01_ft": 2488,
+          "count_abs_gt_0_1_ft": 1415,
+          "count_abs_gt_0_5_ft": 421
+        },
+        "wet_dry_transitions": {
+          "wet_depth_threshold_ft": 0.01,
+          "both_wet_count": 5752,
+          "became_dry_count": 443,
+          "became_wet_count": 3,
+          "both_dry_count": 16487
+        },
+        "max_wse_top_changes_both_wet": {
+          "largest_increases": [
+            {
+              "x": 3063127.4445948,
+              "y": 13801977.7185946,
+              "delta_ft": 0.3780670166015625
+            },
+            {
+              "x": 3063227.4445948,
+              "y": 13801577.7185946,
+              "delta_ft": 0.2789497375488281
+            },
+            {
+              "x": 3063127.4445948,
+              "y": 13801577.7185946,
+              "delta_ft": 0.27698516845703125
+            },
+            {
+              "x": 3062927.4445948,
+              "y": 13802177.7185946,
+              "delta_ft": 0.09903717041015625
+            },
+            {
+              "x": 3062627.4445948,
+              "y": 13802377.7185946,
+              "delta_ft": 0.09729766845703125
+            },
+            {
+              "x": 3062727.4445948,
+              "y": 13802277.7185946,
+              "delta_ft": 0.0930633544921875
+            },
+            {
+              "x": 3062627.4445948,
+              "y": 13802177.7185946,
+              "delta_ft": 0.09273529052734375
+            },
+            {
+              "x": 3062527.4445948,
+              "y": 13802077.7185946,
+              "delta_ft": 0.092529296875
+            },
+            {
+              "x": 3062627.4445948,
+              "y": 13802077.7185946,
+              "delta_ft": 0.09222412109375
+            },
+            {
+              "x": 3062727.4445948,
+              "y": 13802177.7185946,
+              "delta_ft": 0.09221649169921875
+            }
+          ],
+          "largest_decreases": [
+            {
+              "x": 3061927.4445948,
+              "y": 13800877.7185946,
+              "delta_ft": -5.965663909912109
+            },
+            {
+              "x": 3061827.4445948,
+              "y": 13800877.7185946,
+              "delta_ft": -3.4276962280273438
+            },
+            {
+              "x": 3061427.4445948,
+              "y": 13800877.7185946,
+              "delta_ft": -2.4708786010742188
+            },
+            {
+              "x": 3062427.4445948,
+              "y": 13802577.7185946,
+              "delta_ft": -2.3902130126953125
+            },
+            {
+              "x": 3062227.4445948,
+              "y": 13802777.7185946,
+              "delta_ft": -2.280731201171875
+            },
+            {
+              "x": 3061327.4445948,
+              "y": 13800877.7185946,
+              "delta_ft": -2.2353439331054688
+            },
+            {
+              "x": 3062527.4445948,
+              "y": 13802577.7185946,
+              "delta_ft": -2.2321701049804688
+            },
+            {
+              "x": 3062427.4445948,
+              "y": 13802677.7185946,
+              "delta_ft": -2.225494384765625
+            },
+            {
+              "x": 3062527.4445948,
+              "y": 13802677.7185946,
+              "delta_ft": -2.22430419921875
+            },
+            {
+              "x": 3062527.4445948,
+              "y": 13802777.7185946,
+              "delta_ft": -2.2238235473632812
+            }
+          ]
+        },
+        "max_depth_delta": {
+          "common_count": 22685,
+          "finite_count": 22685,
+          "min_delta_ft": -6.179591655731201,
+          "max_delta_ft": 21.396835327148438,
+          "mean_delta_ft": 0.007535199125301484,
+          "median_delta_ft": 0.0,
+          "count_abs_gt_0_001_ft": 3867,
+          "count_abs_gt_0_01_ft": 2953,
+          "count_abs_gt_0_1_ft": 1856,
+          "count_abs_gt_0_5_ft": 737
+        },
+        "max_face_velocity_delta": {
+          "common_face_count": 43548,
+          "finite_count": 43548,
+          "min_delta_ft_per_s": -1.352317988872528,
+          "max_delta_ft_per_s": 2.555599570274353,
+          "mean_delta_ft_per_s": -0.0014918764892384055,
+          "median_delta_ft_per_s": 0.0,
+          "count_abs_gt_0_001_ft_per_s": 3482,
+          "count_abs_gt_0_01_ft_per_s": 1823,
+          "count_abs_gt_0_1_ft_per_s": 455,
+          "count_abs_gt_0_5_ft_per_s": 30
+        },
+        "same_time_wse_both_wet": {
+          "timestamps_identical": true,
+          "compatible": true,
+          "common_count": 22685,
+          "summary_peak_absolute": {
+            "finite_count": 5752,
+            "min_delta_ft": -5.965663909912109,
+            "max_delta_ft": 5.001438140869141,
+            "mean_delta_ft": -0.1755027114433108,
+            "median_delta_ft": -0.002742767333984375,
+            "count_abs_gt_0_001_ft": 4089,
+            "count_abs_gt_0_01_ft": 2704,
+            "count_abs_gt_0_1_ft": 1524,
+            "count_abs_gt_0_5_ft": 874
+          },
+          "summary_max_increase": {
+            "finite_count": 5752,
+            "min_delta_ft": -5.965663909912109,
+            "max_delta_ft": 5.001438140869141,
+            "mean_delta_ft": -0.023638269002646498,
+            "median_delta_ft": 0.0002593994140625,
+            "count_abs_gt_0_001_ft": 3632,
+            "count_abs_gt_0_01_ft": 2274,
+            "count_abs_gt_0_1_ft": 1126,
+            "count_abs_gt_0_5_ft": 238
+          },
+          "summary_max_decrease": {
+            "finite_count": 5752,
+            "min_delta_ft": -5.965663909912109,
+            "max_delta_ft": 0.3780670166015625,
+            "mean_delta_ft": -0.1976101302304752,
+            "median_delta_ft": -0.005950927734375,
+            "count_abs_gt_0_001_ft": 3877,
+            "count_abs_gt_0_01_ft": 2621,
+            "count_abs_gt_0_1_ft": 1513,
+            "count_abs_gt_0_5_ft": 848
+          },
+          "wet_depth_threshold_ft": 0.01,
+          "cells_ever_became_dry": 747,
+          "cells_ever_became_wet": 181,
+          "cells_with_any_both_wet_timestamp": 5752
+        },
+        "top_same_time_wse_events": [
+          {
+            "x": 3061927.4445948,
+            "y": 13800877.7185946,
+            "delta_ft": -5.965663909912109,
+            "time_index": 24,
+            "time_stamp": "02JUN2007 00:00:00"
+          },
+          {
+            "x": 3061927.4445948,
+            "y": 13802777.7185946,
+            "delta_ft": -5.7376556396484375,
+            "time_index": 16,
+            "time_stamp": "01JUN2007 16:00:00"
+          },
+          {
+            "x": 3060727.4445948,
+            "y": 13802077.7185946,
+            "delta_ft": 5.001438140869141,
+            "time_index": 17,
+            "time_stamp": "01JUN2007 17:00:00"
+          },
+          {
+            "x": 3060627.4445948,
+            "y": 13802077.7185946,
+            "delta_ft": 4.462001800537109,
+            "time_index": 17,
+            "time_stamp": "01JUN2007 17:00:00"
+          },
+          {
+            "x": 3061027.4445948,
+            "y": 13802277.7185946,
+            "delta_ft": 4.257659912109375,
+            "time_index": 17,
+            "time_stamp": "01JUN2007 17:00:00"
+          },
+          {
+            "x": 3060827.4445948,
+            "y": 13802177.7185946,
+            "delta_ft": 4.234947204589844,
+            "time_index": 17,
+            "time_stamp": "01JUN2007 17:00:00"
+          },
+          {
+            "x": 3063127.4445948,
+            "y": 13802477.7185946,
+            "delta_ft": -4.033329010009766,
+            "time_index": 13,
+            "time_stamp": "01JUN2007 13:00:00"
+          },
+          {
+            "x": 3062227.4445948,
+            "y": 13802977.7185946,
+            "delta_ft": -3.91473388671875,
+            "time_index": 19,
+            "time_stamp": "01JUN2007 19:00:00"
+          },
+          {
+            "x": 3062227.4445948,
+            "y": 13802877.7185946,
+            "delta_ft": -3.8782272338867188,
+            "time_index": 19,
+            "time_stamp": "01JUN2007 19:00:00"
+          },
+          {
+            "x": 3061427.4445948,
+            "y": 13802377.7185946,
+            "delta_ft": -3.873046875,
+            "time_index": 17,
+            "time_stamp": "01JUN2007 17:00:00"
+          }
+        ]
+      }
+    },
+    "cross_section_max_wse": {
+      "index_order_identical": true,
+      "count": 169,
+      "min_delta_ft": -0.6626510620117188,
+      "max_delta_ft": 0.0001220703125,
+      "count_abs_gt_0_001_ft": 78,
+      "count_abs_gt_0_01_ft": 65,
+      "count_abs_gt_0_1_ft": 54,
+      "top_10_absolute_changes": [
+        {
+          "river": "D118-00-00",
+          "reach": "D118-00-00_0002",
+          "rs": "14737",
+          "existing_max_wse_ft": 76.25936126708984,
+          "revised_max_wse_ft": 75.59671020507812,
+          "delta_ft": -0.6626510620117188
+        },
+        {
+          "river": "D118-00-00",
+          "reach": "D118-00-00_0002",
+          "rs": "13820",
+          "existing_max_wse_ft": 75.86309814453125,
+          "revised_max_wse_ft": 75.2064208984375,
+          "delta_ft": -0.65667724609375
+        },
+        {
+          "river": "D118-00-00",
+          "reach": "D118-00-00_0002",
+          "rs": "14067",
+          "existing_max_wse_ft": 75.85818481445312,
+          "revised_max_wse_ft": 75.20574188232422,
+          "delta_ft": -0.6524429321289062
+        },
+        {
+          "river": "D118-00-00",
+          "reach": "D118-00-00_0002",
+          "rs": "13929",
+          "existing_max_wse_ft": 75.82989501953125,
+          "revised_max_wse_ft": 75.17826843261719,
+          "delta_ft": -0.6516265869140625
+        },
+        {
+          "river": "D118-00-00",
+          "reach": "D118-00-00_0002",
+          "rs": "13681",
+          "existing_max_wse_ft": 75.77156829833984,
+          "revised_max_wse_ft": 75.12977600097656,
+          "delta_ft": -0.6417922973632812
+        },
+        {
+          "river": "D118-00-00",
+          "reach": "D118-00-00_0002",
+          "rs": "15187",
+          "existing_max_wse_ft": 76.33631896972656,
+          "revised_max_wse_ft": 75.71324920654297,
+          "delta_ft": -0.6230697631835938
+        },
+        {
+          "river": "D118-00-00",
+          "reach": "D118-00-00_0002",
+          "rs": "15530",
+          "existing_max_wse_ft": 76.46600341796875,
+          "revised_max_wse_ft": 75.85189819335938,
+          "delta_ft": -0.614105224609375
+        },
+        {
+          "river": "D118-00-00",
+          "reach": "D118-00-00_0002",
+          "rs": "15600",
+          "existing_max_wse_ft": 76.53075408935547,
+          "revised_max_wse_ft": 75.9238510131836,
+          "delta_ft": -0.606903076171875
+        },
+        {
+          "river": "D118-00-00",
+          "reach": "D118-00-00_0002",
+          "rs": "10872",
+          "existing_max_wse_ft": 71.45047760009766,
+          "revised_max_wse_ft": 70.85619354248047,
+          "delta_ft": -0.5942840576171875
+        },
+        {
+          "river": "D118-00-00",
+          "reach": "D118-00-00_0002",
+          "rs": "11829",
+          "existing_max_wse_ft": 72.0165023803711,
+          "revised_max_wse_ft": 71.44367218017578,
+          "delta_ft": -0.5728302001953125
+        }
+      ]
+    }
+  },
+  "spatial_comparison": {
+    "north2d": {
+      "existing_only_center_count": 0,
+      "revised_only_center_count": 0,
+      "direct_wet_dry_transitions": {
+        "wet_depth_threshold_ft": 0.01,
+        "both_wet_count": 6758,
+        "became_dry_count": 307,
+        "became_wet_count": 0,
+        "both_dry_count": 12673
+      }
+    },
+    "south2D": {
+      "existing_only_center_count": 139,
+      "revised_only_center_count": 947,
+      "direct_wet_dry_transitions": {
+        "wet_depth_threshold_ft": 0.01,
+        "both_wet_count": 5752,
+        "became_dry_count": 443,
+        "became_wet_count": 3,
+        "both_dry_count": 16487
+      },
+      "normalized_max_wse_both_wet": {
+        "method": "common_grid_containing_cell",
+        "point_count": 21985,
+        "grid_spacing_ft": 100.0,
+        "wet_depth_threshold_ft": 0.01,
+        "both_wet_count": 5509,
+        "became_dry_count": 477,
+        "became_wet_count": 3,
+        "both_dry_count": 15996,
+        "finite_count": 5509,
+        "min_delta_ft": -5.965663909912109,
+        "max_delta_ft": 0.3780670166015625,
+        "mean_delta_ft": -0.12860366051286637,
+        "median_delta_ft": -0.00426483154296875,
+        "count_abs_gt_0_001_ft": 3409,
+        "count_abs_gt_0_01_ft": 2493,
+        "count_abs_gt_0_1_ft": 1414,
+        "count_abs_gt_0_5_ft": 426
+      },
+      "normalized_wet_dry_transitions": {
+        "wet_depth_threshold_ft": 0.01,
+        "both_wet_count": 5509,
+        "became_dry_count": 477,
+        "became_wet_count": 3,
+        "both_dry_count": 15996
+      },
+      "normalized_top_changes_both_wet": {
+        "largest_increases": [
+          {
+            "x": 3063127.4445948,
+            "y": 13801972.2221756,
+            "delta_ft": 0.3780670166015625
+          },
+          {
+            "x": 3063227.4445948,
+            "y": 13801572.2221756,
+            "delta_ft": 0.2789497375488281
+          },
+          {
+            "x": 3063127.4445948,
+            "y": 13801572.2221756,
+            "delta_ft": 0.27698516845703125
+          },
+          {
+            "x": 3062427.4445948,
+            "y": 13802472.2221756,
+            "delta_ft": 0.1076507568359375
+          },
+          {
+            "x": 3062527.4445948,
+            "y": 13802372.2221756,
+            "delta_ft": 0.0999908447265625
+          },
+          {
+            "x": 3062927.4445948,
+            "y": 13802172.2221756,
+            "delta_ft": 0.09903717041015625
+          },
+          {
+            "x": 3062627.4445948,
+            "y": 13802372.2221756,
+            "delta_ft": 0.09729766845703125
+          },
+          {
+            "x": 3062527.4445948,
+            "y": 13802272.2221756,
+            "delta_ft": 0.0964202880859375
+          },
+          {
+            "x": 3062427.4445948,
+            "y": 13802272.2221756,
+            "delta_ft": 0.09430694580078125
+          },
+          {
+            "x": 3062427.4445948,
+            "y": 13802372.2221756,
+            "delta_ft": 0.09421539306640625
+          }
+        ],
+        "largest_decreases": [
+          {
+            "x": 3061927.4445948,
+            "y": 13800872.2221756,
+            "delta_ft": -5.965663909912109
+          },
+          {
+            "x": 3061827.4445948,
+            "y": 13800872.2221756,
+            "delta_ft": -3.4276962280273438
+          },
+          {
+            "x": 3061427.4445948,
+            "y": 13800872.2221756,
+            "delta_ft": -2.4708786010742188
+          },
+          {
+            "x": 3062427.4445948,
+            "y": 13802572.2221756,
+            "delta_ft": -2.3902130126953125
+          },
+          {
+            "x": 3062227.4445948,
+            "y": 13802772.2221756,
+            "delta_ft": -2.280731201171875
+          },
+          {
+            "x": 3061327.4445948,
+            "y": 13800872.2221756,
+            "delta_ft": -2.2353439331054688
+          },
+          {
+            "x": 3062527.4445948,
+            "y": 13802572.2221756,
+            "delta_ft": -2.2321701049804688
+          },
+          {
+            "x": 3062427.4445948,
+            "y": 13802672.2221756,
+            "delta_ft": -2.225494384765625
+          },
+          {
+            "x": 3062527.4445948,
+            "y": 13802672.2221756,
+            "delta_ft": -2.22430419921875
+          },
+          {
+            "x": 3062527.4445948,
+            "y": 13802772.2221756,
+            "delta_ft": -2.2238235473632812
+          }
+        ]
+      }
+    }
+  },
+  "limitations_v0_2": [
+    "Exact common-cell comparisons are direct. Changed-mesh normalization uses common analysis points assigned to the containing HEC-RAS cell polygon in each model and is explicitly a spatial comparison, not cell equivalence.",
+    "Face velocity is compared only where face endpoint geometry matches exactly; full face-field normalization is a later refinement.",
+    "This prototype reports major HDF geometry/result differences but does not yet perform a semantic comparison of every HEC-RAS input parameter.",
+    "Maximum-vs-maximum WSEL and same-time WSEL are reported separately because they answer different review questions."
+  ]
+}

@@ -1,0 +1,10 @@
+HEC-RAS Review Tool v1.6 validation
+
+- Python compilation: PASS
+- Existing non-raster regression tests: 20 passed
+- Existing raster regression tests: 3 passed
+- Forced large-model optimized comparison: PASS
+- Combined All 2D Flow Areas map contains north2d + south2D: PASS
+- Combined layer control rebuilt after all area layers: PASS
+
+Note: Actual MAAPnext HEC-RAS execution/comparison must still be validated on the user's Windows workstation and production model.
