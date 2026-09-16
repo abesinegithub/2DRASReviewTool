@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-import os
+import os, sys
 import shutil
 import tempfile
 from pathlib import Path
@@ -27,8 +27,9 @@ from hecras_review.runner import (
 from hecras_review.report_docx import build_review_docx
 from hecras_review.source import open_model_source
 
-st.set_page_config(page_title="HEC-RAS Review Tool", layout="wide")
-st.title("HEC-RAS Review Tool — v1.6")
+logo_hr = "./logos/hec_ras.jpg"
+st.set_page_config(page_title="HEC-RAS Review Tool", page_icon=logo_hr, layout="wide")
+st.title(":blue[HEC-RAS Review Tool - v1.6] 🛠️") 
 st.caption("Local workspace review, protected HEC-RAS runs, robust 1D/2D comparison, combined 2D-area mapping, and georeferenced raster review from both stored rasters and direct HEC-RAS plan HDF results")
 
 # Make the detailed-review tabs easier to see and select on wide reviewer screens.
@@ -53,7 +54,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
 
 def _reset_review_state() -> None:
     for key in ["report", "report_pair", "run_history", "updated_working_zip"]:
@@ -204,15 +204,15 @@ def delta_scatter(coords: np.ndarray, delta: np.ndarray, title: str, unit: str =
     return fig
 
 
-st.markdown("### Model / workspace source")
+st.markdown("### :violet[Model / workspace source] 💼")
 source_mode = st.radio(
-    "Source mode",
+    ":orange[Source Mode]",
     [
         "Local extracted model + dependencies (recommended for large models)",
         "Local archive path (.zip/.7z)",
         "Browser upload (.zip/.7z — smaller datasets)",
     ],
-    horizontal=True,
+    horizontal=False,
     key="source_mode_v10",
 )
 workspace_root: Path | None = None
@@ -233,7 +233,7 @@ if source_is_local_folder:
             st.rerun()
     b2.caption("The Browse button works when Streamlit is running locally on Windows. You can always paste/type a path instead.")
     local_model_text = st.text_input(
-        "HEC-RAS model folder",
+        ":orange[HEC-RAS Model Folder]",
         key="local_model_folder_v10",
         placeholder=r"D:\MAAPnext\RAS_Model",
         help="Choose the RAS model folder itself. It may contain one or more HEC-RAS .prj projects.",
@@ -251,7 +251,7 @@ if source_is_local_folder:
             st.rerun()
     d2.caption("Add as many search folders as needed. They can be Terrain, HEC-HMS/DSS, LandCover, or any other external dependency location.")
     dependency_text = st.text_area(
-        "Dependency folders — one folder per line",
+        ":orange[Dependency Folders — one folder per line]",
         key="dependency_folders_text_v10",
         height=120,
         placeholder="D:\\MAAPnext\\Terrain\nD:\\MAAPnext\\HMS_DSS\nE:\\Regional_Data",
@@ -291,9 +291,9 @@ elif source_mode.startswith("Local archive"):
     )
     detected_7z = discover_7zip_executable() or ""
     with st.form("local_archive_form_v10"):
-        archive_text = st.text_input("Local .zip/.7z archive", value=st.session_state.get("local_archive_text_v10", ""), placeholder=r"D:\MAAPnext\MAAPnext.7z")
-        destination_text = st.text_input("Extraction destination (optional)", value=st.session_state.get("archive_destination_text_v10", ""), placeholder=r"D:\HECRAS_Review_Workspaces\MAAPnext")
-        seven_zip_text = st.text_input("7z.exe path (needed for .7z)", value=st.session_state.get("seven_zip_text_v10", detected_7z), placeholder=r"C:\Program Files\7-Zip\7z.exe")
+        archive_text = st.text_input(":orange[Local .zip/.7z Archive]", value=st.session_state.get("local_archive_text_v10", ""), placeholder=r"D:\MAAPnext\MAAPnext.7z")
+        destination_text = st.text_input(":orange[Extraction Destination (optional)]", value=st.session_state.get("archive_destination_text_v10", ""), placeholder=r"D:\HECRAS_Review_Workspaces\MAAPnext")
+        seven_zip_text = st.text_input(":orange[7z.exe Path (needed for .7z)]", value=st.session_state.get("seven_zip_text_v10", detected_7z), placeholder=r"C:\Program Files\7-Zip\7z.exe")
         extract_archive = st.form_submit_button("Extract and load archive", type="primary")
     if extract_archive:
         archive = Path(archive_text.strip().strip('"')).expanduser()
@@ -334,7 +334,7 @@ else:
         "Browser upload is retained for smaller review packages. For multi-GB/100+ GB datasets use Local extracted model + dependencies mode instead."
     )
     uploaded_files = st.file_uploader(
-        "Upload HEC-RAS review archive(s)", type=["zip", "7z"], accept_multiple_files=True,
+        ":orange[Upload HEC-RAS Review Archive(s)]", type=["zip", "7z"], accept_multiple_files=True,
         help="Upload one complete workspace archive, or multiple component archives. For large datasets use Local extracted mode.",
     )
     if not uploaded_files:
